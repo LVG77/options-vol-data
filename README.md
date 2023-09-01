@@ -5,6 +5,8 @@ The scraped data can be browsed here: https://flatgithub.com/lvg77/options-vol-d
 
 ## Column Headings
 
+`update`: date of the last scraping event. I added this date so that we can construct time series for each security after appending all the commits for [iv.csv](https://github.com/LVG77/options-vol-data/blob/master/iv.csv) file
+
 `hv20`: 20-day HISTORICAL (actual) volatility of the underlying
 
 `hv50`: 50-day historical volatility
