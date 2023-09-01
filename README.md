@@ -1,5 +1,7 @@
 # Scrape options volatility data
-Scrape free weekly options volatility data from https://www.optionstrategist.com/calculators/free-volatility-data.
+Scrape free weekly options volatility data from https://www.optionstrategist.com/calculators/free-volatility-data
+
+The scraped data can be browsed here: https://flatgithub.com/lvg77/options-vol-data
 
 ## Column Headings
 
