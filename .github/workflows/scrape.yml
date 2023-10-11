@@ -14,6 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
+    - uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+        cache: pip
+    - name: Install requirements
+      run: pip install -r requirements.txt
     - name: Scrape
       run: |-
         bash get_options_data.sh        
@@ -26,3 +32,11 @@ jobs:
         git commit -m "${timestamp}" || exit 0
         git pull --rebase
         git push
+    - name: Generate history
+      run: |
+        git-history file history.db iv.csv
+    - name: Upload as artifact
+      uses: actions/upload-artifact@v3
+      with:
+        name: history
+        path: history.db 
