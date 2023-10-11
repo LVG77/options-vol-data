@@ -34,7 +34,7 @@ jobs:
         git push
     - name: Generate history
       run: |
-        git-history file history.db iv.csv
+        git-history file history.db iv.csv --csv
     - name: Upload as artifact
       uses: actions/upload-artifact@v3
       with:
